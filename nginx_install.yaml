@@ -1,5 +1,5 @@
 ---
-- name: set up web servers
+- name: web servers
   hosts: all
   tasks:
     - name: ensure nginx is at the latest version
