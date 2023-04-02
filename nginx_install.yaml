@@ -1,8 +1,9 @@
 ---
-- name: web servers
-  hosts: all
+- name: Configure webserver with nginx
+  hosts: webservers
+  become: True
   tasks:
-    - name: ensure nginx is at the latest version
+    - name: install nginx
       apt:
         name: nginx
         state: latest
