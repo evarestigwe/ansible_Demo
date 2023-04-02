@@ -9,8 +9,7 @@ pipeline{
         }
       stage("Run an ansible playbook"){
         steps{
-          ansiblePlaybook credentialsId: 'SSH_KEY', disableHostKeyChecking: true, inventory: 'hosts', playbook: 'nginx_install.yaml'
-          //ansiblePlaybook become: true, disableHostKeyChecking: true, inventory: 'hosts', playbook: 'nginx_install.yaml', vaultCredentialsId: 'SSH-KEY'
+          ansiblePlaybook credentialsId: 'ssh-key', inventory: 'hosts', playbook: 'nginx_install.yaml'
         }
       }
       stage("Print Nginx Installed"){
