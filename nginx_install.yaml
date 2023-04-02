@@ -1,6 +1,6 @@
 ---
-- name: web-servers confifuration
-  hosts: Web-Servers
+- name: web-servers
+  hosts: all
   become: true
   tasks:
     - name: ensure nginx is at the latest version
