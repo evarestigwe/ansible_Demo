@@ -1,5 +1,5 @@
 ---
-- name: web-server confifuration
+- name: web-servers confifuration
   hosts: Web-Servers
   become: true
   tasks:
