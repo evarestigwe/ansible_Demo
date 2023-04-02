@@ -1,7 +1,6 @@
 ---
-- name: web-servers
+- name: set up web servers
   hosts: all
-  become: true
   tasks:
     - name: ensure nginx is at the latest version
       apt:
